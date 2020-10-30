@@ -1,4 +1,12 @@
 <?php
+if (!function_exists('setting'))
+{
+    function setting() {
+        $app =& get_instance();
+        $user = $app->db->get('setting')->row();
+        return $user;
+    }
+}
 function buat_tanggal($format, $time = null)
 {
     $time = ($time == null) ? time() : strtotime($time);

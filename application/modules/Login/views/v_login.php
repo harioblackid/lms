@@ -1,12 +1,14 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="#"><b>E-Learning </b> </a>
-        </div>
-        <!-- /.login-logo -->
+            <img src="<?php echo base_url('assets/img/').setting()->logo; ?>" style="max-height:100px" class="img-responsive" alt="Responsive image">	
+            <h3 class="m-4">
+                <?php echo setting()->nama_sekolah; ?>
+            </h3>
+        </div>        <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">E-Learning Candy V 1.1</p>
+                <p class="login-box-msg"><?php echo setting()->aplikasi; ?></p>
                 <?= $this->session->flashdata('pesan') ?>
                 <form action="<?= base_url('Login') ?>" method="post">
                     <?= form_error('username', '<small class="text-danger">', '</small>') ?>

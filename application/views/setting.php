@@ -4,6 +4,12 @@
 <div class="card-body">
     <form enctype="multipart/form-data" id="fupForm">
         <div class="form-group row">
+            <label for="app" class="col-sm-2 col-form-label">Nama Aplikasi</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="app" id="app" value="<?= $setting['aplikasi'] ?>">
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="sekolah" class="col-sm-2 col-form-label">Nama Sekolah</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="sekolah" id="sekolah" value="<?= $setting['nama_sekolah'] ?>">

@@ -24,22 +24,22 @@ class Setting extends MY_Controller
     {
         ceklogin_admin();
         $setting = $this->db->get_where('setting', ['id_setting' => 1])->row_array();
+        $aplikasi = $this->input->post('app'); 
         $sekolah = $this->input->post('sekolah');
         $alamat = $this->input->post('alamat');
         $provinsi = $this->input->post('provinsi');
         $kabupaten = $this->input->post('kabupaten');
         $jenjang = $this->input->post('jenjang');
-        $bottoken = $this->input->post('bottoken');
         $kepsek = $this->input->post('kepsek');
         $nipkepsek = $this->input->post('nipkepsek');
         $where = ['id_setting' => 1];
         $data = [
+            'aplikasi' => $aplikasi,
             'nama_sekolah' => $sekolah,
             'alamat' => $alamat,
             'provinsi' => $provinsi,
             'kota' => $kabupaten,
             'jenjang' => $jenjang,
-            'bot_token' => $bottoken,
             'kepsek' => $kepsek,
             'nip' => $nipkepsek
         ];
@@ -57,20 +57,20 @@ class Setting extends MY_Controller
                 $this->db->set('logo', $new_logo);
             }
         }
-        $logo2 = $_FILES['file2']['name'];
-        if ($logo2) {
-            $config['upload_path'] = './assets/img';
-            $config['allowed_types'] = 'jpg|png';
-            $config['max_size']     = '100';
-            $config['max_width'] = '1024';
-            $config['max_height'] = '768';
-            $this->load->library('upload', $config);
-            if ($this->upload->do_upload('file2')) {
-                //unlink(FCPATH . 'assets/img/' . $setting['header']);
-                $new_logo = $this->upload->data('file_name');
-                $this->db->set('header', $new_logo);
-            }
-        }
+        // $logo2 = $_FILES['file2']['name'];
+        // if ($logo2) {
+        //     $config['upload_path'] = './assets/img';
+        //     $config['allowed_types'] = 'jpg|png';
+        //     $config['max_size']     = '100';
+        //     $config['max_width'] = '1024';
+        //     $config['max_height'] = '768';
+        //     $this->load->library('upload', $config);
+        //     if ($this->upload->do_upload('file2')) {
+        //         //unlink(FCPATH . 'assets/img/' . $setting['header']);
+        //         $new_logo = $this->upload->data('file_name');
+        //         $this->db->set('header', $new_logo);
+        //     }
+        // }
         $this->db->set($data);
         $this->db->where($where);
         $this->db->update('setting');

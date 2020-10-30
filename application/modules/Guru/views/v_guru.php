@@ -96,6 +96,16 @@
                             <?php } ?>
                         </select>
                     </div>
+
+                    <div class="form-group">
+                        <label for="kelas">Mata Pelajaran Utama</label>
+                        <select class="form-control" name="mapel" id="mapel">
+                            <option value="">Pilih Mapel</option>
+                            <?php foreach ($mapel as $mapel) { ?>
+                                <option value="<?= $mapel['id_mapel'] ?>"><?= $mapel['nama_mapel'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -122,6 +132,7 @@
             $("[name='nama']").val('');
             $("[name='password']").val('');
             $("[name='kelas']").val('');
+            $("[name='mapel']").val('');
         } else {
             $('#btn-submit').prop('disabled', true);
             $('#btn-submit').hide();
@@ -136,6 +147,7 @@
         var nama = $("[name='nama']").val();
         var password = $("[name='password']").val();
         var kelas = $("[name='kelas']").val();
+        var kelas = $("[name='mapel']").val();
         $.ajax({
             type: 'POST',
             url: "<?= base_url('Guru/tambahdata') ?>",
@@ -143,7 +155,8 @@
                 'nama': nama,
                 'nip': nip,
                 'password': password,
-                'kelas': kelas
+                'kelas': kelas,
+                'mapel': mapel
             },
             datatype: 'json',
             success: function(data) {
@@ -180,6 +193,7 @@
         var nama = $("[name='nama']").val();
         var password = $("[name='password']").val();
         var kelas = $("[name='kelas']").val();
+        var mapel = $("[name='mapel']").val();
         $.ajax({
             type: 'POST',
             url: "<?= base_url('Guru/editdata') ?>",
@@ -188,7 +202,8 @@
                 'nama': nama,
                 'nip': nip,
                 'password': password,
-                'kelas': kelas
+                'kelas': kelas,
+                'mapel': mapel
             },
             success: function(data) {
                 data = JSON.parse(data);

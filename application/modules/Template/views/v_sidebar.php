@@ -5,10 +5,10 @@ $iduser = $this->session->userdata('iduser');
 $guru = $this->db->get_where('guru', ['id_guru' => $iduser])->row_array();
 $siswa = $this->db->get_where('siswa', ['id_siswa' => $iduser])->row_array();
 ?>
-<aside class="main-sidebar  elevation-4 sidebar-light-primary">
-    <a href="<?= base_url() ?>" class="brand-link navbar-primary" style="color: white">
-        <img src="<?= base_url('assets/img/') . $setting['logo'] ?>" alt="AdminLTE Logo" class="brand-image  elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light"><?= $setting['nama_sekolah'] ?></span>
+<aside class="main-sidebar elevation-4 sidebar-dark-primary">
+    <a href="<?= base_url() ?>" class="brand-link " style="color: white">
+        <img src="<?= base_url('assets/img/') . $setting['logo'] ?>" alt="AdminLTE Logo" class="brand-image elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light"><?= setting()->aplikasi; ?></span>
     </a>
     <div class="sidebar ">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">

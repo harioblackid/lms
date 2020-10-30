@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Mentor Bootstrap Template - Index</title>
+  <title><?= $setting['aplikasi']; ?></title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -42,17 +42,17 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="<?= base_url(); ?>">LMS Lascar</a></h1>
+      <h1 class="logo mr-auto"><a href="<?= base_url(); ?>"><?= $setting['aplikasi']; ?></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
           <li><a href="<?= base_url('Tentang'); ?>">Tentang</a></li>
-          <li><a href="<?= base_url('Tentang'); ?>">Materi</a></li>
-          <li><a href="<?= base_url('Tentang'); ?>">Guru</a></li>
-          <li><a href="<?= base_url('Tentang'); ?>">Jurusan</a></li>
+          <li><a href="<?= base_url('Web/materi'); ?>">Materi</a></li>
+          <li><a href="<?= base_url('Web/guru'); ?>">Guru</a></li>
+          <li><a href="<?= base_url('Web/jurusan'); ?>">Jurusan</a></li>
           
 
         </ul>

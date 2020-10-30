@@ -4,6 +4,12 @@
 <div class="card-body">
     <form enctype="multipart/form-data" id="fupForm">
         <div class="form-group row">
+            <label for="app" class="col-sm-2 col-form-label">Nama Aplikasi</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="app" id="app" value="<?= $setting['aplikasi'] ?>">
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="sekolah" class="col-sm-2 col-form-label">Nama Sekolah</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="sekolah" id="sekolah" value="<?= $setting['nama_sekolah'] ?>">
@@ -70,12 +76,7 @@
                 <input type="text" class="form-control" name="nipkepsek" id="nipkepsek" value="<?= $setting['nip'] ?>">
             </div>
         </div>
-        <div class="form-group row">
-            <label for="bottoken" class="col-sm-2 col-form-label">TokenBot Telegram</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" name="bottoken" id="bottoken" value="<?= $setting['bot_token'] ?>">
-            </div>
-        </div>
+        
         <div class="form-group row">
             <label for="sekolah" class="col-sm-2 col-form-label">Logo Sekolah</label>
             <div class="col-sm-3">
@@ -88,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <div class="form-group row">
+        <!-- <div class="form-group row">
             <label for="sekolah" class="col-sm-2 col-form-label">Logo Web</label>
             <div class="col-sm-3">
                 <img src="<?= base_url('assets/img/') . $setting['header'] ?>" alt="..." class="img-thumbnail">
@@ -99,7 +100,7 @@
                     <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="form-group row">
             <div class="col-sm-10">
                 <button type="submit" id='btn-submit' class="btn btn-primary">Simpan Pengaturan</button>

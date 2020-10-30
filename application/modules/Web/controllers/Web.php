@@ -31,10 +31,13 @@ class Web extends MY_Controller
     public function guru()
     {
         $data=[
-            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array()
-            ];
+            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array(),
+            'guru' => $this->db->get_where('guru', ['status' => 1])->row_array()
+        ];
+        
+        
         $this->load->view('Web/v_header',$data);
-        $this->load->view('Web/v_guru');
+        $this->load->view('Web/v_guru', $data);
         $this->load->view('Web/v_footer');
     }
     public function materi()

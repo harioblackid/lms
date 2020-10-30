@@ -2,10 +2,10 @@
 <!-- /.content -->
 </div>
 <footer class="main-footer">
-    <strong>Copyright &copy; 2020 <a href="http://cbtcandy.com">E-Learning Candy</a>.</strong>
+    Copyright &copy; <strong> 2020 Rule Breaker</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 1.1
+        <b>Version</b> 1.0
     </div>
 </footer>
 
