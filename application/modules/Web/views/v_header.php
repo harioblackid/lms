@@ -5,14 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?= $setting['aplikasi']; ?></title>
+  <title><?= setting()->aplikasi; ?></title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?= base_url('assets/web'); ?>/img/favicon.png" rel="icon">
-  <link href="<?= base_url('assets/web'); ?>/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link href="<?= base_url('favicon.ico'); ?>" rel="icon">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -42,17 +41,20 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="<?= base_url(); ?>"><?= $setting['aplikasi']; ?></a></h1>
+      <h1 class="logo mr-auto">
+        <a href="<?= base_url(); ?>"><img src="<?= base_url('assets/img/logo2.png'); ?>" alt="Logo"></a>
+      </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
-          <li><a href="<?= base_url('Tentang'); ?>">Tentang</a></li>
-          <li><a href="<?= base_url('Web/materi'); ?>">Materi</a></li>
-          <li><a href="<?= base_url('Web/guru'); ?>">Guru</a></li>
-          <li><a href="<?= base_url('Web/jurusan'); ?>">Jurusan</a></li>
+          <li class="<?= $submenu == 'home' ? "active" : ""; ?>"><a href="<?= base_url(); ?>">Home</a></li>
+          <li class="<?= $submenu == 'tentang' ? "active" : ""; ?>"><a href="<?= base_url('Web/tentang'); ?>">Tentang</a></li>
+          <li class="<?= $submenu == 'profile' ? "active" : ""; ?>"><a href="<?= base_url('Web/profile'); ?>">Profile</a></li>
+          <li class="<?= $submenu == 'materi' ? "active" : ""; ?>"><a href="<?= base_url('Web/materi'); ?>">Materi</a></li>
+          <li class="<?= $submenu == 'guru' ? "active" : ""; ?>"><a href="<?= base_url('Web/guru'); ?>">Guru</a></li>
+          <li class="<?= $submenu == 'jurusan' ? "active" : ""; ?>"><a href="<?= base_url('Web/jurusan'); ?>">Jurusan</a></li>
           
 
         </ul>

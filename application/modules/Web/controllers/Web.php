@@ -13,7 +13,10 @@ class Web extends MY_Controller
     public function index()
     {
         $data=[
-            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array()
+            'siswa' => $this->db->get('siswa')->result_array(),
+            'guru' => $this->db->get('guru')->result_array(),
+            'materi' => $this->db->get('materi')->result_array(),
+            'submenu' => 'home'
             ];
         $this->load->view('Web/v_header',$data);
         $this->load->view('Web/v_beranda',$data);
@@ -22,7 +25,8 @@ class Web extends MY_Controller
     public function siswa()
     {
         $data=[
-            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array()
+            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array(),
+            'submenu' => 'siswa'
             ];
         $this->load->view('Web/v_header',$data);
         $this->load->view('Web/v_siswa');
@@ -32,7 +36,8 @@ class Web extends MY_Controller
     {
         $data=[
             'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array(),
-            'guru' => $this->db->get_where('guru', ['status' => 1])->row_array()
+            'guru' => $this->db->get_where('guru', ['status' => 1])->row_array(),
+            'submenu' => 'guru'
         ];
         
         
@@ -43,28 +48,27 @@ class Web extends MY_Controller
     public function materi()
     {
         $data=[
-            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array()
+            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array(),
+            'submenu' => 'materi'
             ];
         $this->load->view('Web/v_header',$data);
         $this->load->view('Web/v_materi');
         $this->load->view('Web/v_footer');
     }
-    public function pengumuman()
+    public function tentang()
     {
-        $data=[
-            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array()
-            ];
+        $data['submenu'] = 'tentang';
         $this->load->view('Web/v_header',$data);
-        $this->load->view('Web/v_pengumuman');
+        $this->load->view('Web/v_tentang', $data);
         $this->load->view('Web/v_footer');
     }
-    public function video()
+
+    public function profile()
     {
-        $data=[
-            'setting'=>$this->db->get_where('setting',['id_setting'=>1])->row_array()
-            ];
+        $data['submenu'] = 'profile';
         $this->load->view('Web/v_header',$data);
-        $this->load->view('Web/v_video');
+        $this->load->view('Web/v_profile', $data);
         $this->load->view('Web/v_footer');
     }
+
 }

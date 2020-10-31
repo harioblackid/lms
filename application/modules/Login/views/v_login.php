@@ -42,9 +42,22 @@
                     </div>
 
                     <div class="social-auth-links text-center mb-3">
-                        <button class="btn btn-block btn-primary">
-                            <i class="fab fa-sign-in mr-2"></i> Login Masuk
-                        </button>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="<?=base_url(); ?>" class="btn btn-block btn-default">Home</a>
+                                
+                            </div>
+                            <div class="col-md-8">
+                                <button class="btn btn-block btn-primary">
+                                    Login Masuk
+                                </button>
+                            </div>
+                        </div>    
+                    
+
+                        
+
+                        
 
                     </div>
                     <!-- /.social-auth-links -->

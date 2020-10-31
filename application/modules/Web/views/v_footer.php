@@ -16,23 +16,13 @@
             </p>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Materi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Guru</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Jurusan</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Jurusan</h4>
-            <ul>
-              <?php foreach($this->db->get('jurusan')->result_array() as $jurusan) : ?>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"><?= $jurusan['nama_jurusan']; ?></a></li>
-              <?php endforeach; ?>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://dapo.dikdasmen.kemdikbud.go.id/sekolah/ba547c2955a042d08b06" target="_blank">Dapodik Sekolah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://ult.kemdikbud.go.id/" target="_blank">Layanan Kemdikbud</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://pgri.or.id/" target="_blank">PGRI Nasional</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://psmk.kemdikbud.go.id/" target="_blank">Direktorat SMK</a></li>
             </ul>
           </div>
 

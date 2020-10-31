@@ -16,15 +16,14 @@ class guru extends MY_Controller
         ceklogin_admin();
         $data = [
             'isi' => 'Guru/v_guru',
-            'kelas' => $this->db->get('kelas')->result_array(),
-            'mapel' => $this->db->get('mapel')->result_array()
+            'kelas' => $this->db->get('kelas')->result_array()
 
         ];
         $this->template->candy($data);
     }
     function get_idt_guru()
     {
-        echo $this->sm->Ignited_dt('id_guru,nip,nama,no_hp,walas,mapel', 'guru', array());
+        echo $this->sm->Ignited_dt('id_guru,nip,nama,no_hp,walas', 'guru', array());
     }
 
 
@@ -35,7 +34,6 @@ class guru extends MY_Controller
         $nama = $this->input->post('nama');
         $password = $this->input->post('password');
         $walas = $this->input->post('kelas');
-        $mapel = $this->input->post('mapel');
         //FORM VALIDASI
         $this->form_validation->set_rules('nip', 'Nip', 'is_unique[guru.nip]|required');
         $this->form_validation->set_rules('nama', 'nama', 'required');
@@ -56,8 +54,7 @@ class guru extends MY_Controller
                 'nama' => $nama,
                 'password' => password_hash($password, PASSWORD_DEFAULT),
                 'status' => 1,
-                'walas' => $walas,
-                'mapel' => $mapel
+                'walas' => $walas
 
             ];
             $this->sm->createdata('guru', $data);
@@ -87,7 +84,7 @@ class guru extends MY_Controller
                 $data = [
                     'nip' => $nip,
                     'nama' => $nama,
-                    'password' => $pass,
+                    'password' => password_hash($pass, PASSWORD_DEFAULT),
                     'status' => 1,
                     'walas' => $walas
                 ];
