@@ -71,4 +71,13 @@ class Web extends MY_Controller
         $this->load->view('Web/v_footer');
     }
 
+    public function jurusan()
+    {
+        $data['submenu'] = 'jurusan';
+        $this->load->view('Web/v_header',$data);
+        $this->load->view('Web/v_jurusan', $data);
+        $this->load->view('Web/v_footer');
+    }
+
+
 }

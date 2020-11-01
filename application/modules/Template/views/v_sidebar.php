@@ -14,13 +14,25 @@ $siswa = $this->db->get_where('siswa', ['id_siswa' => $iduser])->row_array();
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 <?php
-                if ($akses == 2) { ?>
+                if ($akses == 2) : 
+                    if(empty($guru['foto'])) :
+                ?>
+                    
+                    <img src="<?= base_url('assets/img/default.png') ?>" class="img-circle elevation-2" alt="User Image">
+                <?php 
+                    else : 
+                ?>
                     <img src="<?= base_url('assets/img/profil/') . $guru['foto'] ?>" class="img-circle elevation-2" alt="User Image">
-                <?php } elseif ($akses == 3) { ?>
+                    <?php endif; ?>
+                <?php 
+                    elseif ($akses == 3) :
+                        if(empty($siswa['foto'])) :  
+                ?>
+                    <img src="<?= base_url('assets/img/default.png') ?>" class="img-circle elevation-2" alt="User Image">
+                    <?php else : ?>
                     <img src="<?= base_url('assets/img/profil/') . $siswa['foto'] ?>" class="img-circle elevation-2" alt="User Image">
-                <?php } else { ?>
-                    <img src="<?= base_url() ?>assets/img/profil/default.png" class="img-circle elevation-2" alt="User Image">
-                <?php } ?>
+                    <?php endif; ?>
+                <?php endif; ?>
             </div>
             <div class="info">
                 <a href="#" class="d-block"><?= $this->session->userdata('nama') ?></a>

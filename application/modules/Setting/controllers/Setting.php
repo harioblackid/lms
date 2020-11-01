@@ -82,12 +82,14 @@ class Setting extends MY_Controller
         if ($akses == 2) {
             $data = [
                 'isi' => 'Setting/v_setting_guru',
-                'guru' => $this->db->get_where('guru', ['id_guru' => $this->session->userdata('iduser')])->row_array()
+                'guru' => $this->db->get_where('guru', ['id_guru' => $this->session->userdata('iduser')])->row_array(),
+                'mapel' => $this->db->get('mapel')->result()
             ];
         } elseif ($akses == 3) {
             $data = [
                 'isi' => 'Setting/v_setting_siswa',
-                'siswa' => $this->db->get_where('siswa', ['id_siswa' => $this->session->userdata('iduser')])->row_array()
+                'siswa' => $this->db->get_where('siswa', ['id_siswa' => $this->session->userdata('iduser')])->row_array(),
+                
             ];
         }
         $this->template->candy($data);
@@ -122,9 +124,8 @@ class Setting extends MY_Controller
                 $config['source_image'] = './assets/img/profil/' . $gbr['file_name'];
                 $config['create_thumb'] = FALSE;
                 $config['maintain_ratio'] = FALSE;
-                $config['quality'] = '50%';
-                $config['width'] = 215;
-                $config['height'] = 230;
+                $config['width'] = 510;
+                $config['height'] = 510;
                 $config['new_image'] = './assets/img/profil/' . $gbr['file_name'];
                 $this->load->library('image_lib', $config);
                 $this->image_lib->resize();
@@ -146,20 +147,20 @@ class Setting extends MY_Controller
         $guru = $this->db->get_where('guru', ['id_guru' => $this->session->userdata('iduser')])->row_array();
         $password = $this->input->post('password');
         $nohp = $this->input->post('nohp');
-        $chatid = $this->input->post('chatid');
+        $mapel = $this->input->post('mapel');
         $alamat = $this->input->post('alamat');
         $where = ['id_guru' => $this->session->userdata('iduser')];
         if ($password <> '') {
             $data = [
                 'no_hp' => $nohp,
                 'password' => password_hash($password, PASSWORD_DEFAULT),
-                'chatid' => $chatid,
+                'mapel' => $mapel,
                 'alamat' => $alamat
             ];
         } else {
             $data = [
                 'no_hp' => $nohp,
-                'chatid' => $chatid,
+                'mapel' => $mapel,
                 'alamat' => $alamat
             ];
         }
@@ -177,8 +178,8 @@ class Setting extends MY_Controller
                 $config['create_thumb'] = FALSE;
                 $config['maintain_ratio'] = FALSE;
                 $config['quality'] = '50%';
-                $config['width'] = 215;
-                $config['height'] = 230;
+                $config['width'] = 515;
+                $config['height'] = 530;
                 $config['new_image'] = './assets/img/profil/' . $gbr['file_name'];
                 $this->load->library('image_lib', $config);
                 $this->image_lib->resize();

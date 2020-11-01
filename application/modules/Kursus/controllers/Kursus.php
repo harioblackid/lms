@@ -1,5 +1,5 @@
 <?php (defined('BASEPATH')) or exit('No direct script access allowed');
-
+ 
 class Kursus extends MY_Controller
 {
     function __construct()
@@ -194,7 +194,8 @@ class Kursus extends MY_Controller
                 'guru' => $guru,
                 'kelas' => $this->db->get('kelas')->result_array(),
                 'materi' => $this->db->get_where('materi', ['id_kursus' => $id_kursus])->result_array(),
-                'id_kursus' => $id_kursus
+                'id_kursus' => $id_kursus,
+                'id_mapel' => $this->db->get_where('kursus', ['id_kursus' => $id_kursus])->row()->id_mapel
             ];
         } elseif ($akses == 3) {
 
@@ -272,6 +273,7 @@ class Kursus extends MY_Controller
         $kursus = $this->input->post('id_kursus');
         $jawab = $this->input->post('jawab');
         $kuis = $this->input->post('kuis');
+        $id_mapel = $this->input->post('id_mapel');
         $this->form_validation->set_rules('kd', 'kd', 'required');
         $this->form_validation->set_rules('materi', 'materi', 'required');
         if ($this->form_validation->run() == FALSE) {
@@ -294,7 +296,8 @@ class Kursus extends MY_Controller
                 'id_guru' => $guru,
                 'id_kursus' => $kursus,
                 'jawab' => $jawab,
-                'kuis' => $kuis
+                'kuis' => $kuis,
+                'id_mapel' => $id_mapel
             ];
             $this->sm->createdata('materi', $data);
         }

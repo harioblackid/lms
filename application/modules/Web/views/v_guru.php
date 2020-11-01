@@ -19,10 +19,24 @@
     ?>
 	  <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
       <div class="member">
-        <img src="<?= base_url('assets/img/profil/') . $guru['foto'] ?>" class="img-fluid" alt="">
+        <?php if(empty($guru['foto'])) : ?>
+          <img src="<?= base_url('assets/img/no-image.png') ?>" class="img-fluid" alt="">
+        <?php else : ?>
+          <img src="<?= base_url('assets/img/profil/') . $guru['foto'] ?>" class="img-fluid" alt="">
+        <?php endif; ?>
+        
         <div class="member-content">
         <h4><?= $guru['nama']; ?></h4>
-        <span><?= $mapel->nama_mapel; ?></span>
+        <span>
+          <?php
+            if(empty($mapel->nama_mapel)){
+              echo "Mata Pelajaran Belum ditentukan";
+            }
+            else {
+              echo $mapel->nama_mapel;
+            }
+          ?>
+        </span>
         <p>
           <?= $guru['alamat']; ?>
         </p>

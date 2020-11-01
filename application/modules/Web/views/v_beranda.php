@@ -3,7 +3,7 @@
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Learning Management System,<br>Belajar kapanpun dan dimanapun</h1>
       <h2>Sistem terbaru kami untuk menghadapi situasi yang mengharuskan pelaksanaan Pembelajaran Jarak Jauh (PJJ)</h2>
-      <a href="<?= base_url('inovation'); ?>" class="btn-get-started">Selengkapnya</a>
+      <a href="<?= base_url('Login'); ?>" class="btn-get-started">Coba Sekarang</a>
     </div>
   </section><!-- End Hero -->
 
@@ -21,7 +21,7 @@
     <div class="row" data-aos="zoom-in" data-aos-delay="100">
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
-          <img src="<?= base_url('assets/web'); ?>/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+          <img src="<?= base_url('assets/web'); ?>/img/rey.jpg" class="img-fluid" alt="">
           <div class="member-content">
             <h4>Reyfasha Danendra</h4>
             <span>Web Development</span>
@@ -40,7 +40,7 @@
 
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
-          <img src="<?= base_url('assets/web'); ?>/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+          <img src="<?= base_url('assets/web'); ?>/img/susi.jpg" class="img-fluid" alt="">
           <div class="member-content">
             <h4>Susilawati</h4>
             <span>Documentator</span>
@@ -59,7 +59,7 @@
 
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member">
-          <img src="<?= base_url('assets/web'); ?>/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+          <img src="<?= base_url('assets/web'); ?>/img/rohaeni.jpg" class="img-fluid" alt="">
           <div class="member-content">
             <h4>Rohaeni</h4>
             <span>System Analyst</span>
@@ -153,7 +153,7 @@
             Karena kami merupakan salah satu SMK Swasta terfavorit di Keluarga PGRI se-Kabupaten Karawang. Pelayananan terhadap siswa merupakan prioritas utama kami sejak pertama kali di dirikan pada tahun 2000. 
           </p>
           <div class="text-center">
-            <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+            <a href="<?= base_url('Web/profile'); ?>" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -164,21 +164,21 @@
               <div class="icon-box mt-4 mt-xl-0">
                 <i class="bx bx-network-chart "></i>
                 <h4>Jaringan Mitra Industri</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <p>Sudah banyak Perusahaan yang bekerja sama dengan <?= setting()->nama_sekolah; ?> </p>
               </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
                 <i class="bx bx-buildings"></i>
                 <h4>Infrastruktur yang memadai</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <p>Fasilitas gedung, sarana praktik, serta akses Internet yang dapat menunjang Pembelajaran</p>
               </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
-                <i class="bx bx-rocket"></i>
-                <h4>Up to date</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                <i class="bx bxs-graduation"></i>
+                <h4>Profesional</h4>
+                <p>Pendidik dan Tenaga Pendidik yang ahli pada bidang nya menjadikan SDM sangat berkualitas</p>
               </div>
             </div>
           </div>

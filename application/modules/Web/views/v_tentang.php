@@ -18,9 +18,14 @@
             <img src="<?= base_url('assets/web/'); ?>/img/course-details4.jpg" class="img-fluid" alt="">
             <h3>Sebuah inovasi akan muncul disaat masalah melanda.</h3>
             <p>
-              Qui et explicabo voluptatem et ab qui vero et voluptas. Sint voluptates temporibus quam autem. Atque nostrum voluptatum laudantium a doloremque enim et ut dicta. Nostrum ducimus est iure minima totam doloribus nisi ullam deserunt. Corporis aut officiis sit nihil est. Labore aut sapiente aperiam.
-              Qui voluptas qui vero ipsum ea voluptatem. Omnis et est. Voluptatem officia voluptatem adipisci et iusto provident doloremque consequatur. Quia et porro est. Et qui corrupti laudantium ipsa.
-              Eum quasi saepe aperiam qui delectus quaerat in. Vitae mollitia ipsa quam. Ipsa aut qui numquam eum iste est dolorum. Rem voluptas ut sit ut.
+              Kondisi pandemi saat ini yang sedang kita hadapi mewajibkan berjaga jarak, seperti kutipan pada laman covid19.go.id dengan statement Apa yang bisa Anda lakukan? “Utamanya, tetap di rumah dan hanya keluar bila memang benar-benar perlu”. Dengan demikian segala bentuk kegiatan yang bersifat kerumumnan tidak diperbolehkan, kebijakan tersebut sangat menghambat Kegiatan Belajar Mengajar.
+            </p>
+            <p>
+            Pada era modern ini, seiring berjalannya waktu perkembangan teknologi informasi semakin pesat dan memberikan banyak kemudahan secara langsung berdampak pada kegiatan manusia. Dalam keadaan seperti ini, banyak kegiatan yang biasanya dilakukan secara normal harus dilakukan dengan cara yang berbeda agar tetap dapat dilaksanakan. Salah satunya, dalam bidang pendidikan agar tetap dapat melakukan Kegiatan Belajar-Mengajar di era New Normal yang harus dilakukan secara Online. <br>
+            </p>
+            
+            <p>
+              Saat ini, sudah banyak aplikasi E-Learning yang dapat diakses oleh siswa untuk melakukan kegiatan pembelajaran, salah satunya Google Classroom, Admodo, dan lain-lain. Namun, kekurangan pada aplikasi tersebut diatas tidak dapat memantau kehadiran siswa pada saat Kegiatan Belajar-Mengajar. 
             </p>
           </div>
           <div class="col-lg-4">
@@ -45,27 +50,30 @@
       </div>
     </section><!-- End Cource Details Section -->
 
+    
     <!-- ======= Cource Details Tabs Section ======= -->
     <section id="cource-details-tabs" class="cource-details-tabs">
+      
       <div class="container" data-aos="fade-up">
-
+        <div class="section-title">
+          <h2>Mengapa</h2>
+          <p><?= setting()->aplikasi; ?></p>
+        </div>
         <div class="row">
           <div class="col-lg-3">
+          
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
-                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Modi sit est</a>
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">Up to date</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+                <a class="nav-link" data-toggle="tab" href="#tab-2">Kurikulum 2013</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+                <a class="nav-link" data-toggle="tab" href="#tab-3">Attendance Monitor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+                <a class="nav-link" data-toggle="tab" href="#tab-4">User Friendly</a>
               </li>
             </ul>
           </div>
@@ -74,48 +82,60 @@
               <div class="tab-pane active show" id="tab-1">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Architecto ut aperiam autem id</h3>
-                    <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    <h3>Dikembangkan dengan teknologi terbaru</h3>
+                    <p class="font-italic">Learning Management System dikembangkan HTML 5, Bootstrap 4, PHP 7, jQuery 1.8</p>
+                    <p>
+                      Mengutamakan responsibility dan tampilan kenyamanan untuk pengguna sehingga dapat mudah digunakan. 
+                      Pengembangan sistem dilengkapi berbagai plug-in JS salah satunya adalah SweetAlert dan ToastJS.
+                      Peran Bootstrap 4 adalah untuk mempermudah Design Web yang responsif.
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/course-details-tab-1.png" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/web/img/'); ?>up-to-date.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-2">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Et blanditiis nemo veritatis excepturi</h3>
-                    <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                    <h3>Alur Sistem disesuaikan dengan Struktur Kurikulum 2013</h3>
+                    <p class="font-italic">Memungkinkan Administrasi sekolah dapat dijalankan sesuai aturan.</p>
+                    <p>
+                      Dengan disesuaikannya alur sistem <?= setting()->aplikasi; ?> dengan Administrasi sekolah akan mempermudah Kepala Sekolah untuk memantau seluruh kegiatan KBM. 
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/course-details-tab-2.png" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/web/img/'); ?>kurikulum.jpg" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-3">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                    <p class="font-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                    <h3>Monitoring Kehadiran Siswa</h3>
+                    <p class="font-italic">
+                      Laporan kehadiran dapat buat dengan <?= setting()->aplikasi; ?>
+                    </p>
+                    <p>
+                      Setiap Siswa atau Guru yang tidak melaksanakan tugasnya dapat terpantau, baik harian maupun bulanan.
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/course-details-tab-3.png" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/web/img/'); ?>report.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>
               <div class="tab-pane" id="tab-4">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                    <p class="font-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                    <h3>Bootstrap 4 dan jQuery</h3> 
+                    <p class="font-italic"><?= setting()->aplikasi; ?> dapat di akses pada berbagai Platform</p>
+                    <p>
+                      Dengan tampilan yang responsif memudahkan pengguna untuk mengakses sistem pada Multiplatform, tidak harus menggunakan PC sehingga jangkauan pengguna dapat ditingkatkan.
+                    </p>
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/course-details-tab-4.png" alt="" class="img-fluid">
+                    <img src="<?= base_url('assets/web/img/'); ?>frontend.png" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>

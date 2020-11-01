@@ -81,6 +81,82 @@
     </div>
 
   </div>
+  <!-- End Container -->
+  
+  <div class="why-us container" data-aos="fade-up">
+    <div class="section-title mt-5">
+      <p>Visi Misi</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 d-flex align-items-stretch">
+        <div class="content">
+          <h3>Visi</h3>
+          <p>
+          “Terwujudnya insan pelajar yang berakhlakul karimah, sehat, cerdas, berprestasi dan memiliki daya saing tinggi menuju keberhasilan cita-cita visioner SMANDA Baru Era Baru di Tahun 2025”. 
+          </p>
+        
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex align-items-stretch">
+        <div class="content bg-light text-dark">
+          <h3>Misi</h3>
+          
+              <p>Meningkatkan pembinaan dan pengamalan nilai-nilai keimanan dan ketaqwaan terhadap Tuhan Yang Maha Esa</p>
+              <p>Mengembangkan lingkungan sekolah yang sehat, bersih, rapih, tertib, aman dan nyaman</p>
+              <p>Meningkatkan profesionalisme Pendidik dan Tenaga Kependidikan, serta akuntabilitas sekolah sebagai pusat pengembangan pendidikan berdasarkan standar nasional.</p>
+              <p>Membangun watak dan kepribadian warga sekolah yang jujur, disiplin, bertanggung jawab dan berwawasan kebangsaan.</p>
+              <p>Meningkatkan kualitas dan kuantitas lulusan yang diterima diperguruan tinggi terbaik.</p>
+              <p>Meningkatkan kualitas dan daya saing melalui penguasaan dan penerapan ICT.</p>
+              <p>Memberdayakan peran serta stakeholders dalam penyelenggaraan pendidikan yang berkualitas berdasarkan prinsip Manajemen Berbasis Sekolah.</p>      
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="features container" data-aos="fade-up">
+
+    <div class="section-title mt-5">
+      <p>Paket Keahlian</p>
+    </div>
+
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-lg-4 col-md-6 mt-0">
+        <div class="icon-box">
+          <i class="bx bx-code-alt" style="color: #ffbb2c;"></i>
+          <h3><a href="">Rekayasa Perangkat Lunak</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-0">
+        <div class="icon-box">
+          <i class="bx bx-cog" style="color: #5578ff;"></i>
+          <h3><a href="">Teknik Mesin</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-0">
+        <div class="icon-box">
+          <i class="bx bxs-car-mechanic" style="color: #e80368;"></i>
+          <h3><a href="">Teknik Kendaraan Ringan</a></h3>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt-4">
+        <div class="icon-box">
+          <i class="bx bxs-factory" style="color: #ffa76e;"></i>
+          <h3><a href="">Teknik Mekanik Industri</a></h3>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mt-4">
+        <div class="icon-box">
+          <i class="bx bxs-flame" style="color: #e80368;"></i>
+          <h3><a href="">Teknik Pengelasan</a></h3>
+        </div>
+      </div>
+        
+    </div>
+
+  </div>
+
 </section><!-- End Contact Section -->
 
 </main><!-- End #main -->

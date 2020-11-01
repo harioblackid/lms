@@ -28,9 +28,19 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="chatid" class="col-sm-2 col-form-label">Chat ID Telegram</label>
+            <label for="mapel" class="col-sm-2 col-form-label">Mata Pelajaran</label>
             <div class="col-sm-10">
-                <input class="form-control" name="chatid" id="chatid" rows="3" value="<?= $guru['chatid'] ?>" />
+                
+                <select name="mapel" id="mapel" class="form-control">
+                <option selected="" disabled="">-- Pilih Mapel --</option>
+                    <?php 
+                    
+                    foreach ($mapel as $data) {
+                        $selected = ($data->id_mapel == $guru['mapel']) ? 'selected' : '';
+                        echo '<option value=' . $data->id_mapel . ' ' . $selected . '>' . $data->nama_mapel . '</option>';
+                    }
+                    ?>
+                </select>
             </div>
         </div>
         <div class="form-group row">
@@ -41,9 +51,16 @@
         </div>
         <div class="form-group row">
             <label for="foto" class="col-sm-2 col-form-label">Foto Profil</label>
+            <?php if(empty($guru['foto'])) : ?>
+                <div class="col-sm-3">
+                    <img src="<?= base_url('assets/img/no-image.png'); ?>" alt="..." class="img-thumbnail">
+                </div>
+            <?php else : ?>
             <div class="col-sm-3">
                 <img src="<?= base_url('assets/img/profil/') . $guru['foto'] ?>" alt="..." class="img-thumbnail">
             </div>
+            <?php endif; ?>
+            
             <div class="col-sm-3">
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" name='file' id="inputGroupFile01">
@@ -71,7 +88,7 @@
                 data: new FormData(this),
                 processData: false,
                 contentType: false,
-                cache: false,
+                cache: false, 
 
 
                 success: function(data) {
@@ -80,6 +97,9 @@
                     if (data == 'sukses') {
                         location.reload();
 
+                    }
+                    else{
+                        location.reload();
                     }
                 }
             })

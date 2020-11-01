@@ -29,7 +29,7 @@
               
             </div>
 
-            <h3><a href="course-details.html"><?= $materi->materi; ?></a></h3>
+            <h3><?= $materi->materi; ?></h3>
             <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
             <div class="trainer d-flex justify-content-between align-items-center">
               <div class="trainer-profile d-flex align-items-center">

@@ -53,9 +53,7 @@
           <li class="<?= $submenu == 'tentang' ? "active" : ""; ?>"><a href="<?= base_url('Web/tentang'); ?>">Tentang</a></li>
           <li class="<?= $submenu == 'profile' ? "active" : ""; ?>"><a href="<?= base_url('Web/profile'); ?>">Profile</a></li>
           <li class="<?= $submenu == 'materi' ? "active" : ""; ?>"><a href="<?= base_url('Web/materi'); ?>">Materi</a></li>
-          <li class="<?= $submenu == 'guru' ? "active" : ""; ?>"><a href="<?= base_url('Web/guru'); ?>">Guru</a></li>
-          <li class="<?= $submenu == 'jurusan' ? "active" : ""; ?>"><a href="<?= base_url('Web/jurusan'); ?>">Jurusan</a></li>
-          
+          <li class="<?= $submenu == 'guru' ? "active" : ""; ?>"><a href="<?= base_url('Web/guru'); ?>">Guru</a></li>       
 
         </ul>
       </nav><!-- .nav-menu -->

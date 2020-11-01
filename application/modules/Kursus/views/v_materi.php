@@ -211,6 +211,7 @@
                 <div class="modal-body">
                     <div class="alert alert-danger" style="display:none">
                     </div>
+                    <input type="hidden" name="id_mapel" value="<?=$id_mapel; ?>">
                     <input type="hidden" name="idtugas" class="form-control" placeholder="">
                     <div class="form-group">
                         <label for="tugas">Judul Tugas</label>
@@ -336,7 +337,8 @@
                 'tutup': tutup,
                 'guru': guru,
                 'komentar': komentar,
-                'id_kursus': <?= $id_kursus ?>,
+                'id_kursus': <?= $id_kursus; ?>,
+                'id_mapel': "<?= $id_mapel; ?>",
                 'jawab': jawab,
                 'kuis': kuis
             },
