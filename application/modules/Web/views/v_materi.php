@@ -2,7 +2,7 @@
 
 <!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs">
-  <div class="container">
+  <div class="container"> 
     <h2>Materi</h2>
     <p> Daftar materi aktif pada seluruh Mata Pelajaran </p>
   </div>
@@ -17,20 +17,19 @@
       <?php $materi = $this->db->get('materi')->result();
         foreach ($materi as $materi) :
             $guru = $this->db->get_where('guru', ['id_guru'=>$materi->id_guru])->row();
-            $mapel = $this->db->get_where('mapel', ['id_mapel'=>$materi->id_mapel])->row();
       ?>
 
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
         <div class="course-item">
           <img src="<?= base_url('assets/web/img/course-1.jpg'); ?>" class="img-fluid" alt="...">
           <div class="course-content">
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h4><?= $mapel->nama_mapel; ?> </h4>
+              <h4><?= $materi->id_mapel; ?> </h4>
               
             </div>
 
             <h3><?= $materi->materi; ?></h3>
-            <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+            <?= $materi->isi; ?>
             <div class="trainer d-flex justify-content-between align-items-center">
               <div class="trainer-profile d-flex align-items-center">
                 <img src="<?= base_url('assets/img/profil/').$guru->foto; ?>" class="img-fluid" alt="">
